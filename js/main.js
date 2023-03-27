@@ -17,3 +17,14 @@ function multiply (firstNumber, secondNumber) {
 function divide (firstNumber, secondNumber) {
     return firstNumber / secondNumber;
 }
+
+function operate(operator) {
+    const operations = {
+        '+': add(firstNumber, secondNumber),
+        '-': subtract(firstNumber, secondNumber),
+        '*': multiply(firstNumber, secondNumber),
+        '/': divide(firstNumber, secondNumber),
+    }
+
+    return operations[operator];
+}
