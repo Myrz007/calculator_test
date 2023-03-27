@@ -2,20 +2,20 @@ let firstNumber;
 let operator;
 let secondNumber;
 
-function add (firstNumber, secondNumber) {
-    return firstNumber + secondNumber;
+function add(num1,num2) {
+    return num1 + num2;
 }
 
-function subtract (firstNumber, secondNumber) {
-    return firstNumber - secondNumber;
+function subtract(num1, num2) {
+    return num1 - num2;
 }
 
-function multiply (firstNumber, secondNumber) {
-    return firstNumber * secondNumber;
+function multiply(num1, num2) {
+    return num1 * num2;
 }
 
-function divide (firstNumber, secondNumber) {
-    return firstNumber / secondNumber;
+function divide(num1, num2) {
+    return num1 / num2;
 }
 
 function operate(operator) {
