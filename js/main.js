@@ -33,3 +33,8 @@ function operate(operator, num1, num2) {
 
     return operations[operator](num1, num2);
 }
+
+function populateDisplay(value) {
+    operation += value;
+    currentOp.value = operation;
+}
