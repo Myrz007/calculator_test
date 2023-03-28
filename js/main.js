@@ -38,3 +38,5 @@ function populateDisplay(value) {
     operation += value;
     currentOp.value = operation;
 }
+
+buttons.forEach((button) => button.addEventListener('click', (e) => populateDisplay(button.textContent)));
