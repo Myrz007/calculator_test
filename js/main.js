@@ -18,13 +18,13 @@ function divide(num1, num2) {
     return num1 / num2;
 }
 
-function operate(operator) {
+function operate(operator, num1, num2) {
     const operations = {
-        '+': add(firstNumber, secondNumber),
-        '-': subtract(firstNumber, secondNumber),
-        '*': multiply(firstNumber, secondNumber),
-        '/': divide(firstNumber, secondNumber),
+        '+': add,
+        '-': subtract,
+        '*': multiply,
+        '/': divide,
     }
 
-    return operations[operator];
+    return operations[operator](num1, num2);
 }
