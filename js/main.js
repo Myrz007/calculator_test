@@ -49,7 +49,7 @@ function populatePreviousOps(operation) {
     previousOps.appendChild(validatedOp);
 }
 
-buttons.forEach((button) => button.addEventListener('click', (e) => {
+buttons.forEach((button) => button.addEventListener('click', () => {
     const buttonContent = button.textContent;
 
     if (buttonContent !== '=') populateDisplay(buttonContent);
