@@ -39,4 +39,8 @@ function populateDisplay(value) {
     currentOp.value = operation;
 }
 
+function spacedOperators(operation) {
+    return operation.replace(/[\+\-\*÷]/g, (operator) => ` ${operator} `);
+}
+
 buttons.forEach((button) => button.addEventListener('click', (e) => populateDisplay(button.textContent)));
