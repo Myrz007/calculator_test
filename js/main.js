@@ -28,7 +28,7 @@ function operate(operator, num1, num2) {
         '+': add,
         '-': subtract,
         '*': multiply,
-        '/': divide,
+        '÷': divide,
     }
 
     return operations[operator](num1, num2);
