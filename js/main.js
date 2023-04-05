@@ -54,10 +54,19 @@ function populatePreviousOps(operation) {
 
 buttons.forEach((button) => button.addEventListener('click', () => {
     const buttonContent = button.textContent;
+    
+    if (buttonContent !== '=') {
+        if (buttonContent === '⌫') {
+            operation = '';
+            firstNumber = '';
+            operator = '';
+            secondNumber = '';
+        }
 
-    if (buttonContent !== '=') populateDisplay(buttonContent);
+        populateDisplay(buttonContent);
+    }
     else {
-        populatePreviousOps(operation);
+        previousOps.textContent = `${spacedOperators(operation)} =`;
         operation = '';
     }
 }));
