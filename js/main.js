@@ -46,12 +46,6 @@ function spacedOperators(operation) {
     return operation.replace(/[\+\-\*÷]/g, (operator) => ` ${operator} `);
 }
 
-function populatePreviousOps(operation) {
-    let validatedOp = document.createElement('p');
-    validatedOp.textContent = `${spacedOperators(operation)} =`;
-    previousOps.appendChild(validatedOp);
-}
-
 buttons.forEach((button) => button.addEventListener('click', () => {
     const buttonContent = button.textContent;
     
