@@ -35,8 +35,11 @@ function operate(operator, num1, num2) {
 }
 
 function populateDisplay(value) {
-    operation += value;
-    currentOp.value = operation;
+    if (value === '⌫') currentOp.value = '';
+    else {
+        operation += value;
+        currentOp.value = operation;
+    }
 }
 
 function spacedOperators(operation) {
