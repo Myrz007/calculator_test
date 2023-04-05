@@ -31,7 +31,7 @@ function operate(operator, num1, num2) {
         '÷': divide,
     }
 
-    return operations[operator](num1, num2);
+    return operations[operator](parseFloat(num1), parseFloat(num2));
 }
 
 function populateDisplay(value) {
