@@ -39,11 +39,8 @@ function populateValue(value) {
 }
 
 function populateDisplay(value) {
-    if (value === '⌫') currentOp.value = '';
-    else {
         operation += value;
         currentOp.value = operation;
-    }
 }
 
 function handleNumbers(symbol) {
