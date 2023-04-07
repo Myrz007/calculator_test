@@ -63,15 +63,27 @@ buttons.forEach((button) => button.addEventListener('click', () => {
     
     if (buttonContent !== '=') {
         if (buttonContent === '⌫') {
+            currentOp.value = '';
             operation = '';
             firstNumber = '';
             operator = '';
             secondNumber = '';
         }
-
-        populateDisplay(buttonContent);
+        else if (button.className === 'operator') {
+            handleNumbers(buttonContent);
+            populateValue(buttonContent);
+            populateDisplay(buttonContent);
+        }
+        else {
+            populateValue(buttonContent);
+            populateDisplay(buttonContent);
+        }
     }
     else {
-        operation = '';
+        secondNumber = `${operate(operator, firstNumber, secondNumber)}`;
+        currentOp.value = secondNumber;
+        operation = secondNumber;
+        firstNumber = '';
+        operator = '';
     }
 }));
