@@ -34,7 +34,7 @@ function operate(operator, num1, num2) {
 }
 
 function populateDisplay(value) {
-    if (value === '⌫' || value === '=') currentOp.value = '';
+    if (value === '⌫') currentOp.value = '';
     else {
         operation += value;
         currentOp.value = operation;
