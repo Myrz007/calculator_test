@@ -1,4 +1,3 @@
-const previousOps = document.getElementById('previous-ops');
 const currentOp = document.getElementById('current-op');
 const buttons = document.querySelectorAll('button');
 
@@ -35,15 +34,11 @@ function operate(operator, num1, num2) {
 }
 
 function populateDisplay(value) {
-    if (value === '⌫') currentOp.value = '';
+    if (value === '⌫' || value === '=') currentOp.value = '';
     else {
         operation += value;
         currentOp.value = operation;
     }
-}
-
-function spacedOperators(operation) {
-    return operation.replace(/[\+\-\*÷]/g, (operator) => ` ${operator} `);
 }
 
 buttons.forEach((button) => button.addEventListener('click', () => {
@@ -60,7 +55,6 @@ buttons.forEach((button) => button.addEventListener('click', () => {
         populateDisplay(buttonContent);
     }
     else {
-        previousOps.textContent = `${spacedOperators(operation)} =`;
         operation = '';
     }
 }));
