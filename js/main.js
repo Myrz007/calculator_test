@@ -39,8 +39,8 @@ function populateValue(value) {
 }
 
 function populateDisplay(value) {
-        operation += value;
-        currentOp.value = operation;
+    operation += value;
+    currentOp.value = operation;
 }
 
 function handleNumbers(symbol) {
