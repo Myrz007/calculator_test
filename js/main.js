@@ -46,6 +46,18 @@ function populateDisplay(value) {
     }
 }
 
+function handleNumbers(symbol) {
+    if (firstNumber === '') {
+        firstNumber = secondNumber;
+    }
+    else {
+        firstNumber = operate(operator, firstNumber, secondNumber)
+        secondNumber = '';
+    }
+
+    operator = symbol;
+}
+
 buttons.forEach((button) => button.addEventListener('click', () => {
     const buttonContent = button.textContent;
     
