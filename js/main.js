@@ -30,6 +30,10 @@ function modulo(num1, num2) {
     return num1 % num2;
 }
 
+function percentage(num) {
+    return num / 100;
+}
+
 function operate(operator, num1, num2) {
     const operations = {
         '+': add,
