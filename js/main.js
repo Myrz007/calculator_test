@@ -27,6 +27,8 @@ function divide(num1, num2) {
 function modulo(num1, num2) {
     if (num2 === 0) return 'To divide by zero is not defined';
 
+    if (!Number.isInteger(num2)) return 'Modulo can only be defined with integers';
+
     return num1 % num2;
 }
 
@@ -40,13 +42,14 @@ function operate(operator, num1, num2) {
         '-': subtract,
         '*': multiply,
         '÷': divide,
+        'Mod': modulo,
     }
 
     return operations[operator](parseFloat(num1), parseFloat(num2));
 }
 
 function populateValue(value) {
-    if (value === '+' || value === '-' || value === '*' || value === '÷') secondNumber = '';
+    if (value === '+' || value === '-' || value === '*' || value === '÷' || value === 'Mod') secondNumber = '';
     else secondNumber += value;
 }
 
