@@ -36,6 +36,10 @@ function percentage(num) {
     return num / 100;
 }
 
+function negativeNumber(num) {
+    return -num;
+}
+
 function operate(operator, num1, num2) {
     if (operator === '%') return percentage(num1);
 
