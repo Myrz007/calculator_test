@@ -19,7 +19,7 @@ function multiply(num1, num2) {
 }
 
 function divide(num1, num2) {
-    if (num2 === 0) return 'To divide by zero is impossible';
+    if (num2 === 0) return 'To divide by zero is not defined';
 
     return Math.round(num1 / num2 * 1000) / 1000;
 }
@@ -37,6 +37,8 @@ function percentage(num) {
 }
 
 function operate(operator, num1, num2) {
+    if (operator === '%') return percentage(num1);
+
     const operations = {
         '+': add,
         '-': subtract,
@@ -49,7 +51,11 @@ function operate(operator, num1, num2) {
 }
 
 function populateValue(value) {
-    if (value === '+' || value === '-' || value === '*' || value === '÷' || value === 'Mod') secondNumber = '';
+    if (value === '+' ||
+        value === '-' ||
+        value === '*' ||
+        value === '÷' ||
+        value === 'Mod') secondNumber = '';
     else secondNumber += value;
 }
 
