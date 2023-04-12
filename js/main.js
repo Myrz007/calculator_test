@@ -43,6 +43,8 @@ function negativeNumber(num) {
 function operate(operator, num1, num2) {
     if (operator === '%') return percentage(num1);
 
+    if (operator === '+/-') return negativeNumber(num1);
+
     const operations = {
         '+': add,
         '-': subtract,
