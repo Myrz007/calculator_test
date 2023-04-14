@@ -28,3 +28,11 @@ input {
     grid-template-rows: repeat(5, 70px);
     gap: 8px;
 }
+
+button {
+    background-color: #194339;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
