@@ -36,3 +36,17 @@ button {
     border-radius: 8px;
     font-size: 18px;
 }
+
+#clear {
+    background-color: red;
+    color: black;
+}
+
+#equal {
+    background-color: #18C70C;
+    color: black;
+}
+
+.operator {
+    background-color: #5E6FBF;
+}
