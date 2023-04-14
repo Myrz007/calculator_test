@@ -1,3 +1,10 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 input {
     height: 50px;
     width: 296px;
