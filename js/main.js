@@ -82,7 +82,7 @@ function handleNumbers(symbol) {
     operator = symbol;
 }
 
-buttons.forEach((button) => button.addEventListener('click', () => {
+function handleButtons(button) {
     const buttonContent = button.textContent;
     
     if (buttonContent !== '=') {
@@ -110,4 +110,8 @@ buttons.forEach((button) => button.addEventListener('click', () => {
         firstNumber = '';
         operator = '';
     }
+}
+
+buttons.forEach((button) => button.addEventListener('click', () => {
+    handleButtons(button)
 }));
