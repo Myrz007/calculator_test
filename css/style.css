@@ -5,6 +5,17 @@ body {
     justify-content: center;
 }
 
+#calculator {
+    height: 470px;
+    width: 320px;
+    background-color: #75D9B5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
 input {
     height: 50px;
     width: 296px;
